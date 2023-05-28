@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+.blank{
+  background-color: red;
+  text-align: center;
+  color:white;
+}
+nav{
+  display: flex;
+  background-color: black;
+}
+nav li{
+  margin: 10px;
+  list-style-type: none;
+  color: white;
+}
