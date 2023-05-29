@@ -5,20 +5,24 @@ function TextForm(props) {
     function handleUpClick() {
         // console.log("handleUpClick");
         let newText=text.toUpperCase();
-        setText(newText);
+      setText(newText);
+      props.showAlert(" Convert to Uppercase!","success ");
     }
     function handleLoClick() {
       let newText = text.toLowerCase();
       setText(newText);
+      props.showAlert(" Convert to Lowercase!", "success ");
     }
     function handleClearClick() {
       let newText = "";
       setText(newText);
+      props.showAlert(" Text Clear!", "success ");
     }
     function handleCopyClick() {
       let newText = document.getElementById('myBox');
       newText.select();
       navigator.clipboard.writeText(newText.value);
+      props.showAlert(" Copy to Clipboard!", "success ");
     }
     function handleOnChange(event) {
         // console.log("onChange");
