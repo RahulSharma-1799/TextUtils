@@ -15,6 +15,11 @@ function TextForm(props) {
       let newText = "";
       setText(newText);
     }
+    function handleCopyClick() {
+      let newText = document.getElementById('myBox');
+      newText.select();
+      navigator.clipboard.writeText(newText.value);
+    }
     function handleOnChange(event) {
         // console.log("onChange");
         setText(event.target.value)
@@ -40,6 +45,9 @@ function TextForm(props) {
           </button>
           <button className="btn btn-primary mx-2" onClick={handleClearClick}>
             Clear text
+          </button>
+          <button className="btn btn-primary mx-2" onClick={handleCopyClick}>
+            Copy text
           </button>
         </div>
         <div className="container my-3">
