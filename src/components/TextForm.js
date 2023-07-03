@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 
 function TextForm(props) {
-    const [text, setText] = useState("");
+  const [text, setText] = useState("");
     function handleUpClick() {
-        // console.log("handleUpClick");
-        let newText=text.toUpperCase();
+      let newText=text.toUpperCase();
       setText(newText);
       props.showAlert(" Convert to Uppercase!","success ");
     }

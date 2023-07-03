@@ -4,7 +4,7 @@ import Alert from "./components/Alert";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -25,7 +25,6 @@ function App() {
 
         <Routes>
           <Route path="/about" element={<About />} />
-
           <Route
             path="/"
             element={
@@ -35,7 +34,6 @@ function App() {
               />
             }
           />
-      
         </Routes>
       </Router>
     </>
